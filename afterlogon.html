@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Strona Główna</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,600&display=swap" rel="stylesheet">
+    <style>
+
+        html,body{
+            min-width: 500px;
+        }
+        .picker__box .picker__table .picker__day.picker__day--today {
+            color: #6f00ea;
+        }
+
+
+        .picker__box .picker__table .picker__day--selected, .picker__box .picker__table .picker__day--selected:hover, .picker__box .picker__table .picker--focused {
+            background-color: #783fc4 !important;
+            color: white !important;
+        }
+
+
+        .picker__box .picker__header .picker__date-display {
+            background-color: #833de3 !important;
+        }
+
+        .picker__box .picker__footer .picker__button--today:before {
+            top: -.05em;
+            width: 0;
+            border-top: .66em solid #6f00ea;
+            border-left: .66em solid transparent;
+        }
+
+        .form-check-label {
+            color: #495057;
+
+        }
+
+        .form-check-input[type="radio"]:not(:checked) + label:before, .form-check-input[type="radio"]:not(:checked) + label:after, label.btn input[type="radio"]:not(:checked) + label:before, label.btn input[type="radio"]:not(:checked) + label:after {
+            border: 2px solid #cdcdcd !important;
+        }
+
+        .form-check-input[type="radio"]:checked + label:after {
+            background-color: #965ce7 !important;
+            border: 2px solid #965ce7 !important;
+        }
+
+        .special_button {
+            padding: .6rem 1.6rem;
+            font-size: .84rem;
+        }
+
+        .labelel {
+            color: #2E2E2E;
+            font-weight: 300;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .smoll_labelel {
+            color: #2E2E2E;
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .welcome {
+            color: #2E2E2E;
+            font-weight: 400;
+            font-size: 1.30rem;
+            margin-bottom: 15px;
+        }
+
+        #saldo {
+            color: #2E2E2E;
+            font-weight: 700;
+            font-size: 2.0rem;
+            margin-bottom: 15px;
+        }
+
+        #debet {
+            color: #2E2E2E;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        #witaj {
+            color: #2E2E2E;
+            font-weight: 700;
+            font-size: 1.65rem;
+            margin-bottom: 15px;
+        }
+        input.select-dropdown.form-control{
+             color: white!important;
+              margin: 0px!important;
+         }
+          li{
+              width:300px;
+          }
+        .select-wrapper span.caret {
+            color:white!important;
+        }
+        @media only screen and (max-width: 800px) {
+           td{
+
+               font-size: 0.9rem!important;
+               margin-bottom: 0px!important;
+           }
+            .card-body{
+                padding: 15px!important;
+
+            }
+            .welcome {
+                font-size: 0.90rem;
+
+            }
+
+            #saldo {
+                font-size: 1.4rem;
+            }
+
+            #debet {
+                font-size: 0.8rem;
+            }
+
+            #witaj {
+                font-size: 1.3rem;
+            }
+            .aaa{
+                margin-top: 5px!important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #945ae2!important;
+            }
+            li{
+                width: 97%!important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!--Main Navigation-->
+<header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>Amethyst Holdings</strong></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+                    aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <select class="mdb-select" id="navselect"  searchable="Wyszukaj konto..." style="color:white;">
+                            <option value="1" data-secondary-text="1. Konto Główne. Saldo: 215 550,32 zł">12
+                                1234 1234 1234 1234 1234 1234
+                            </option>
+                            <option value="2" data-secondary-text="2. Konto Emerytura. Saldo: 325 550,11 zł">23
+                                2345 2345 2345 2345 2345 2345
+                            </option>
+                            <option value="3" data-secondary-text="3. Konto Na piwo. Saldo: 435 550,52 zł">34
+                                3456 3456 3456 3456 3456 3456
+                            </option>
+                            <option value="4" data-secondary-text="4. Konto Wspólne. Saldo: 543 550,40 zł">45
+                                4567 4567 4567 4567 4567 4567
+                            </option>
+                        </select>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!--Intro Section-->
+    <section class="view intro-4">
+        <div class="mask mbackground h-100 d-flex justify-content-center align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-10 col-lg-11 col-md-12 col-sm-12 mx-auto mt-lg-3">
+                        <!--Form with header-->
+                        <div class="card wow fadeIn" data-wow-delay="0.3s">
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-6">
+                                        <p><span id="witaj">Witaj Jan Kowalski</span></p>
+                                        <p><span class="welcome">Konto główne </span></p>
+                                        <p><span class="welcome">1234 1234 1234 1234 1234 1234 </span>
+                                        <p></p>
+
+                                    </div>
+
+                                    <div class="col-6 align-bottom text-right">
+                                        <p>&nbsp; </p>
+                                        <p>&nbsp; </p>
+                                        <p><span id="saldo">Saldo: 53 234,32 zł</span></p>
+                                        <p><span id="debet">w tym debet w koncie: 0,00 zł</span></p>
+
+
+                                    </div>
+                                </div>
+                                <div class="row float-right">
+
+                                    <div class="text-center mt-1 mb-0">
+                                        <a href="historia.html"><button type="button" class="btn btn-outline-secondary waves-effect pl-5 pr-5">
+                                            Historia</a>
+                                        </button>
+
+
+                                    </div>
+                                    <div class="text-center mt-1 mb-0"><a href="przelew.html">
+                                        <button class="btn mbutton pl-5 pr-5">Przelew</button></a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Form with header-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-10 col-lg-11 col-md-12 col-sm-12 mx-auto mt-3 mt-lg-3 aaa">
+                        <!--Form with header-->
+                        <div class="card wow fadeIn" data-wow-delay="0.3s">
+                            <div class="card-body">
+                                <span class="labelel">Ostatnie transakcje</span>
+                                <!--Header-->
+                                <div class='mt-0'>
+                                    <!--Table-->
+                                    <table id="tablePreview" class="table table-hover table-sm">
+                                        <!--Table head-->
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Nadawca / Odbiorca</th>
+                                            <th>Tytuł</th>
+                                            <th>Data</th>
+                                            <th>Kwota</th>
+                                            <th>Saldo</th>
+
+
+                                        </tr>
+                                        </thead>
+                                        <!--Table head-->
+                                        <!--Table body-->
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>John Doe</td>
+                                            <td>Example transaction 1</td>
+                                            <td>14.01.2021</td>
+                                            <td class="spending">3 243,54 zł</td>
+                                            <td>22 123,43 zł</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jane Doe</td>
+                                            <td>Example transaction 2</td>
+                                            <td>10.01.2021</td>
+                                            <td class="income">6 324,43 zł</td>
+                                            <td>25 435,53 zł</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry Garry</td>
+                                            <td>Tablica jest ~hoverable~</td>
+                                            <td>05.01.2021</td>
+                                            <td class="income">7 224,43 zł</td>
+                                            <td>18 343,52 zł</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Jameson Jameński</td>
+                                            <td>Przelew Środków</td>
+                                            <td>01.01.2021</td>
+                                            <td class="spending">4 224,43 zł</td>
+                                            <td>11 742,01 zł</td>
+                                        </tr>
+                                        </tbody>
+                                        <!--Table body-->
+                                    </table>
+                                    <!--Table-->
+                                    <div class="text-center mt-1 mb-0">
+                                        <a href="historia.html"><button class="btn btn-outline-secondary btn-sm">Pokaż więcej</button></a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Form with header-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+</header>
+<!--Main Navigation-->
+
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script>
+    new WOW().init();
+
+    $(document).ready(function () {
+        $('.mdb-select').materialSelect();
+    });
+    $(document).ready(function () {
+        $("tr:odd").css("color", "#370064");
+    });
+</script>
+</body>
+</html>
